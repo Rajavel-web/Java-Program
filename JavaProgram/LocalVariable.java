@@ -1,22 +1,33 @@
-package JavaProgram;
+package EaxmpleProgram;
 
-public class LocalVariable {
-             public void sum() {
-            	 int a=10;
-            	 int b=20;
-            	 System.out.println(a+b);
-            			 
-             }
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-//		 Declare a local variable
-		
-		
-		///this variable is local to this main method
-		
-		LocalVariable obj=new LocalVariable();
-		obj.sum();
+class Student {
+    String name;
+     int age;
+     String department;
 
-	}
-
+   
+    public Student(String name , int age,String department) {
+    	this.name=name;
+    	this.age=age;
+    	this.department=department;
+         
+    }
+    public void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Department: " + department);
+    }
 }
+
+public class LocalVariable{
+    public static void main(String[] args) {
+    	System.out.println("Student Information:");
+    	Student student = new Student("Rajavel",24,"BCA");
+    	student.display();
+    	
+    	
+
+    }
+}
+
+
